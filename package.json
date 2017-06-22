@@ -1,0 +1,26 @@
+{
+  "name": "cs7280",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsherrill480/CS7280.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsherrill480/CS7280/issues"
+  },
+  "homepage": "https://github.com/bsherrill480/CS7280#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "d3-geo-projection": "^2.1.2",
+    "shapefile": "^0.6.2"
+  }
+}
