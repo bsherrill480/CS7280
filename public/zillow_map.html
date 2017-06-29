@@ -98,8 +98,33 @@
 			.attr('x', 20)
 			.attr('y', 45);
 
+	function extractDots(data) {
+		return data.map(function (item) {
+			return [item['Longitude'], item['Latitude']];
+		})
+	}
+
+	d3.csv('short_incident.csv', function (error, data) {
+		console.log('p_inc', data)
+//		var dot = ['-122.3', '47.64'];
+//		var dots = [dot];
+		var dots = extractDots(data);
+
+		dotLayer.selectAll('circle')
+				.data(dots)
+				.enter()
+				.append('circle')
+				.attr('cx', function (d) {
+					return projection(d)[0];
+				})
+				.attr('cy', function (d) {
+					return projection(d)[1];
+				})
+				.attr('r', '1px')
+				.attr('fill', 'blue')
+	});
+
 	d3.json("Zillow_Zhvi_Neighborhoods_WA_Geo.json", function(error, mapData) {
-		console.log(mapData);
 		var features = mapData.features;
 		var max_zvhi = d3.max(features, getZvhiOr0);
 		color.domain([0, max_zvhi]);
@@ -115,21 +140,6 @@
 				.on('mouseout', mouseout)
 //				.on('click', clicked);
 
-		var dot = [-122.3, 47.64];
-		var dots = [dot];
-
-		dotLayer.selectAll('circle')
-				.data(dots)
-				.enter()
-				.append('circle')
-				.attr('cx', function (d) {
-					return projection(d)[0];
-				})
-				.attr('cy', function (d) {
-					return projection(d)[1];
-				})
-				.attr('r', '4px')
-				.attr('fill', 'blue')
 	});
 
 	// Get province name
@@ -196,8 +206,6 @@
 	function mouseover(d){
 		// Highlight hovered province
 		d3.select(this).style('fill', 'orange');
-		console.log('mouseover d', d);
-		console.log('mouseover this', this);
 
 		// Draw effects
 		addDescription(d.properties);
