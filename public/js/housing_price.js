@@ -4,6 +4,7 @@
     // "imports"
     var consts = window.consts;
     var projection = consts.projection;
+    var height = consts.height;
 
     // set on init;
     var bigText;
@@ -93,9 +94,10 @@
             .classed('big-text', true)
             .attr('x', 20)
             .attr('y', 45);
-
         mapLayer = g.append('g')
             .classed('map-layer', true);
+        scaleLayer = g.append('g')
+            .classed('scale-layer', true);
 
     }
     function renderScale(min_zvhi, max_zvhi) {
@@ -146,7 +148,7 @@
         var min_zvhi = d3.min(features, getFnMinZhviOrMax(max_zvhi));
         color.domain([min_zvhi, max_zvhi]);
 
-        setupScale(min_zvhi, max_zvhi);
+        renderScale(min_zvhi, max_zvhi);
 
         // Draw each province as a path
         mapLayer.selectAll('path')

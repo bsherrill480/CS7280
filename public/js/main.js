@@ -10,9 +10,6 @@
 	var hmap = window.hmap;
 	var consts = window.consts;
 
-	// removed '' and 'NULL'
-
-
 	var centered;
 	var width = consts.width;
 	var height = consts.height;
