@@ -1,0 +1,78 @@
+/**
+ *
+ * Created by brian on 7/22/17.
+ */
+// should be first file in htmp
+(function () {
+
+	var consts = window.consts = {};
+	consts.width = 700;
+	consts.height = 700;
+
+	consts.CRIME_TYPE_GROUPED = [
+		{
+			name: 'Violent Crime',
+			crime: [
+				'ROBBERY',
+				'ASSAULTS',
+				'THREATS, HARASSMENT',
+				'TRESPASS',
+				'DRIVE BY (NO INJURY)',
+			]
+		},
+		{name: 'Non-Violent Crime', crime: [
+			'PROSTITUTION',
+			'NUISANCE, MISCHIEF',
+			'LIQUOR VIOLATIONS',
+			'NUISANCE, MISCHIEF ',
+			'LEWD CONDUCT',
+			'SHOPLIFTING',
+			'CAR PROWL',
+			'MISCELLANEOUS MISDEMEANORS',
+			'BURGLARY',
+			'AUTO THEFTS',
+		]},
+		{
+			name: 'Reported Activity',
+			crime: [
+				'PROWLER',
+				'PERSON DOWN/INJURY',
+				'HAZARDS',
+				'HARBOR CALLS',
+				'SUSPICIOUS CIRCUMSTANCES',
+				'DISTURBANCES',
+				'NARCOTICS COMPLAINTS',
+				'PROPERTY - MISSING, FOUND',
+			]
+		},
+
+		{name: 'Police Activity', crime: [
+			'ACCIDENT INVESTIGATION',
+			'MENTAL HEALTH',
+			'PERSONS - LOST, FOUND, MISSING',
+			'BEHAVIORAL HEALTH',
+			'MOTOR VEHICLE COLLISION INVESTIGATION',
+			'PROPERTY DAMAGE',
+			'ANIMAL COMPLAINTS',
+			'FALSE ALARMS',
+			'FALSE ALACAD',
+			'OTHER PROPERTY',
+			'FRAUD CALLS',
+			'WEAPONS CALLS',
+			'OTHER VICE',
+			'TRAFFIC RELATED CALLS',
+			'ARREST',
+			'BIKE',
+			'PUBLIC GATHERINGS',
+			'FAILURE TO REGISTER (SEX OFFENDER)',
+		]},
+	];
+	
+    consts.projection = d3.geo.mercator()
+        .scale(100000)
+        // Center the Map in Seattle
+        .center([-122.3, 47.64])
+        .translate([consts.width / 2, consts.height / 2]);
+        
+})();
+
