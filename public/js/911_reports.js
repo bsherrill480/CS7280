@@ -5,19 +5,22 @@
 (function () {
 
 	// "Imports"
+	var CRIME_KEY = 'Event Clearance Group';
 	var consts = window.consts;
 	var CRIME_TYPE_GROUPED = consts.CRIME_TYPE_GROUPED;
 	var projection = consts.projection;
 
 	
 	function crimeTypeToClass(crimeType) {
-		return crimeType.replace(/[^a-zA-Z]/g, '')
+		var r = crimeType.replace(/[^a-zA-Z]/g, '')
+
+		return r
 	}
 
 	function processDots(data) {
 		return data.map(function (item) {
 			return {
-				crimeType: item['Event Clearance Group'],
+				crimeType: item[CRIME_KEY],
 				loc: [item['Longitude'], item['Latitude']],
 			};
 		})
@@ -36,30 +39,58 @@
 			var crimeTypes = crimeCategory.crime;
 			var crimeGroupContainer = document.createElement('div');
 			var crimeGroupLabel = document.createElement('label');
-			var crimeGroupOption = document.createElement('input');
-			crimeGroupOption.setAttribute('type', 'checkbox');
 			crimeGroupLabel.innerText = categoryName;
 			crimeGroupLabel.className += ' crime-type-header';
-			crimeGroupContainer.appendChild(crimeGroupOption);
 			crimeGroupContainer.appendChild(crimeGroupLabel);
 			var crimeGroupTypesContainer = document.createElement('div');
 			crimeGroupTypesContainer.className += ' crime-group-types';
+			var options = [];
+
+			var groupOptions = document.createElement('small');
+
+			var checkAllLink = document.createElement('a');
+			checkAllLink.innerText = '(all)';
+
+			var uncheckAllLink = document.createElement('a');
+			uncheckAllLink.innerText = '(none)';
+
+			checkAllLink.addEventListener('click', function () {
+				options.forEach(function (option) {
+					if (!option.checked) {
+						option.dispatchEvent(new MouseEvent('click', {}));
+					}
+				});
+			});
+			uncheckAllLink.addEventListener('click', function () {
+				options.forEach(function (option) {
+					if (option.checked) {
+						option.dispatchEvent(new MouseEvent('click', {}));
+					}
+				});
+			});
+
+			groupOptions.appendChild(checkAllLink);
+			groupOptions.appendChild(uncheckAllLink);
+
+			crimeGroupContainer.appendChild(groupOptions);
 
 			crimeTypes.forEach(function(crime_type) {
+				if (crime_type == '') {
+					console.log('badCrimeType', crime_type);
+				}
 				var option = document.createElement('input');
+				options.push(option);
 				var label = document.createElement('label');
 				var crimeTypeContainer = document.createElement('div');
-				crimeTypeContainer.appendChild(label);
 				crimeTypeContainer.appendChild(option);
+				crimeTypeContainer.appendChild(label);
 				label.innerText = crime_type;
 				option.setAttribute('type', 'checkbox');
 				option.checked = true;
 				option.addEventListener('click', function () {
-					console.log('clicked!', crime_type, option.checked);
 					var className = crimeTypeToClass(crime_type);
 					var isChecked = option.checked;
 					var dotsToManipulate = document.getElementsByClassName(className);
-					console.log('dotsTo', dotsToManipulate)
 					var el;
 					for(var i = 0; i < dotsToManipulate.length; i++) {
 						el = dotsToManipulate[i];
@@ -74,8 +105,10 @@
 				});
 				crimeGroupTypesContainer.appendChild(crimeTypeContainer);
 			});
+			
 			crimeGroupContainer.appendChild(crimeGroupTypesContainer);
 			rootEl.appendChild(crimeGroupContainer);
+			
 		});
 	}
 
@@ -92,7 +125,7 @@
 			.enter()
 			.append('circle')
 			.attr('class', function (d) {
-				return 'dot ' + crimeTypeToClass(d.crimeType);
+				return 'crime-dot dot ' + crimeTypeToClass(d.crimeType);
 			})
 			.attr('cx', function (d) {
 				var loc = d.loc;

@@ -28,8 +28,9 @@
 	var g = svg.append('g');
 
 	// call inits on imports so they can setup their map interactions
-	p911.init(g);
+	// call hmap first so that it dots can paint on top of it
 	hmap.init(g);
+	p911.init(g);
 
 
 	// Neighborhoods
@@ -45,5 +46,7 @@
 		p911.renderFilterPoliceDotsUI();
 		p911.renderPoliceDots(data);
 	});
+
+
 
 })();

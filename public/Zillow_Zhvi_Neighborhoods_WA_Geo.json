@@ -15,8 +15,8 @@
     "City": "Seattle",
     "Name": "Capitol Hill",
     "RegionID": "250206",
-    "NumCrimes": 311,
-    "CrimeOverArea": 5.681276072644566,
+    "NumCrimes": 352,
+    "CrimeOverArea": 6.4302545902600885,
     "zhvi": 595600
    },
    "geometry": {
@@ -639,8 +639,8 @@
     "City": "Seattle",
     "Name": "Greenwood",
     "RegionID": "250788",
-    "NumCrimes": 135,
-    "CrimeOverArea": 3.059412105004646,
+    "NumCrimes": 108,
+    "CrimeOverArea": 2.4475296840037166,
     "zhvi": 626900
    },
    "geometry": {
@@ -703,8 +703,8 @@
     "City": "Seattle",
     "Name": "Bitter Lake",
     "RegionID": "271814",
-    "NumCrimes": 38,
-    "CrimeOverArea": 1.246210664423089,
+    "NumCrimes": 34,
+    "CrimeOverArea": 1.1150305944838166,
     "zhvi": 511500
    },
    "geometry": {
@@ -787,8 +787,8 @@
     "City": "Seattle",
     "Name": "Columbia City",
     "RegionID": "271839",
-    "NumCrimes": 65,
-    "CrimeOverArea": 2.234972647161344,
+    "NumCrimes": 60,
+    "CrimeOverArea": 2.063051674302779,
     "zhvi": 551500
    },
    "geometry": {
@@ -1195,8 +1195,8 @@
     "City": "Seattle",
     "Name": "Eastlake",
     "RegionID": "271857",
-    "NumCrimes": 20,
-    "CrimeOverArea": 1.8629683657960805,
+    "NumCrimes": 21,
+    "CrimeOverArea": 1.9561167840858846,
     "zhvi": 602000
    },
    "geometry": {
@@ -1623,8 +1623,8 @@
     "City": "Seattle",
     "Name": "Minor",
     "RegionID": "271921",
-    "NumCrimes": 81,
-    "CrimeOverArea": 4.4552795743461,
+    "NumCrimes": 71,
+    "CrimeOverArea": 3.905245058994729,
     "zhvi": 679100
    },
    "geometry": {
@@ -1775,8 +1775,8 @@
     "City": "Seattle",
     "Name": "Montlake",
     "RegionID": "271923",
-    "NumCrimes": 21,
-    "CrimeOverArea": 0.8411246030457761,
+    "NumCrimes": 19,
+    "CrimeOverArea": 0.7610174979937974,
     "zhvi": 1154600
    },
    "geometry": {
@@ -2927,8 +2927,8 @@
     "City": "Seattle",
     "Name": "North Beacon Hill",
     "RegionID": "271932",
-    "NumCrimes": 57,
-    "CrimeOverArea": 1.0864888659130552,
+    "NumCrimes": 66,
+    "CrimeOverArea": 1.2580397394782745,
     "zhvi": 586500
    },
    "geometry": {
@@ -3371,8 +3371,8 @@
     "City": "Seattle",
     "Name": "Olympic Hills",
     "RegionID": "271957",
-    "NumCrimes": 67,
-    "CrimeOverArea": 2.335953368095673,
+    "NumCrimes": 42,
+    "CrimeOverArea": 1.4643289770151982,
     "zhvi": 519900
    },
    "geometry": {
@@ -3587,8 +3587,8 @@
     "City": "Seattle",
     "Name": "Portage Bay",
     "RegionID": "271964",
-    "NumCrimes": 14,
-    "CrimeOverArea": 2.026547906897942,
+    "NumCrimes": 6,
+    "CrimeOverArea": 0.8685205315276894,
     "zhvi": 1138200
    },
    "geometry": {
@@ -3963,8 +3963,8 @@
     "City": "Seattle",
     "Name": "Victory Heights",
     "RegionID": "272005",
-    "NumCrimes": 18,
-    "CrimeOverArea": 0.7603268505759829,
+    "NumCrimes": 25,
+    "CrimeOverArea": 1.056009514688865,
     "zhvi": 585300
    },
    "geometry": {
@@ -4083,8 +4083,8 @@
     "City": "Seattle",
     "Name": "South Beacon Hill",
     "RegionID": "343994",
-    "NumCrimes": 36,
-    "CrimeOverArea": 1.0154515266503332,
+    "NumCrimes": 31,
+    "CrimeOverArea": 0.8744165923933426,
     "zhvi": 462800
    },
    "geometry": {
@@ -4355,8 +4355,8 @@
     "City": "Seattle",
     "Name": "View Ridge",
     "RegionID": "343996",
-    "NumCrimes": 13,
-    "CrimeOverArea": 0.4584803495272689,
+    "NumCrimes": 8,
+    "CrimeOverArea": 0.2821417535552424,
     "zhvi": 911200
    },
    "geometry": {
@@ -4731,8 +4731,8 @@
     "City": "Seattle",
     "Name": "Bryant",
     "RegionID": "344003",
-    "NumCrimes": 15,
-    "CrimeOverArea": 0.8831940414064102,
+    "NumCrimes": 17,
+    "CrimeOverArea": 1.0009532469272648,
     "zhvi": 796100
    },
    "geometry": {
@@ -4859,8 +4859,8 @@
     "City": "Seattle",
     "Name": "Olympic Manor",
     "RegionID": "344005",
-    "NumCrimes": 13,
-    "CrimeOverArea": 1.0910199269512684,
+    "NumCrimes": 9,
+    "CrimeOverArea": 0.7553214878893397,
     "zhvi": 943000
    },
    "geometry": {
@@ -4907,8 +4907,8 @@
     "City": "Seattle",
     "Name": "Uptown",
     "RegionID": "344010",
-    "NumCrimes": 84,
-    "CrimeOverArea": 7.532930468295954,
+    "NumCrimes": 76,
+    "CrimeOverArea": 6.815508518934435,
     "zhvi": 447400
    },
    "geometry": {
@@ -6007,8 +6007,8 @@
     "City": "Seattle",
     "Name": "Admiral",
     "RegionID": "344019",
-    "NumCrimes": 37,
-    "CrimeOverArea": 0.7171526325981263,
+    "NumCrimes": 39,
+    "CrimeOverArea": 0.7559176397655927,
     "zhvi": 759900
    },
    "geometry": {
@@ -6475,8 +6475,8 @@
     "City": "Seattle",
     "Name": "Fairmount Park",
     "RegionID": "344021",
-    "NumCrimes": 15,
-    "CrimeOverArea": 0.9133712031694254,
+    "NumCrimes": 20,
+    "CrimeOverArea": 1.2178282708925672,
     "zhvi": 576800
    },
    "geometry": {
@@ -6631,8 +6631,8 @@
     "City": "Seattle",
     "Name": "Mt. Baker",
     "RegionID": "344028",
-    "NumCrimes": 32,
-    "CrimeOverArea": 1.3975884855284375,
+    "NumCrimes": 22,
+    "CrimeOverArea": 0.9608420838008007,
     "zhvi": 890800
    },
    "geometry": {
@@ -7371,8 +7371,8 @@
     "City": "Seattle",
     "Name": "Roxhill",
     "RegionID": "344030",
-    "NumCrimes": 29,
-    "CrimeOverArea": 1.3929100569764636,
+    "NumCrimes": 31,
+    "CrimeOverArea": 1.4889728195265646,
     "zhvi": 470200
    },
    "geometry": {
@@ -7491,8 +7491,8 @@
     "City": "Seattle",
     "Name": "Brighton",
     "RegionID": "250146",
-    "NumCrimes": 59,
-    "CrimeOverArea": 2.8900941413888632,
+    "NumCrimes": 60,
+    "CrimeOverArea": 2.9390787878530813,
     "zhvi": 467200
    },
    "geometry": {
@@ -7643,8 +7643,8 @@
     "City": "Seattle",
     "Name": "Georgetown",
     "RegionID": "250714",
-    "NumCrimes": 57,
-    "CrimeOverArea": 0.8345783018117532,
+    "NumCrimes": 60,
+    "CrimeOverArea": 0.8785034755913191,
     "zhvi": -1
    },
    "geometry": {
@@ -8307,8 +8307,8 @@
     "City": "Seattle",
     "Name": "Green Lake",
     "RegionID": "250780",
-    "NumCrimes": 57,
-    "CrimeOverArea": 1.6887986329287905,
+    "NumCrimes": 59,
+    "CrimeOverArea": 1.748054725312257,
     "zhvi": 779900
    },
    "geometry": {
@@ -10141,8 +10141,8 @@
     "City": "Seattle",
     "Name": "Holly Park",
     "RegionID": "250889",
-    "NumCrimes": 25,
-    "CrimeOverArea": 2.5268229608282406,
+    "NumCrimes": 28,
+    "CrimeOverArea": 2.8300417161276297,
     "zhvi": 484800
    },
    "geometry": {
@@ -10233,8 +10233,8 @@
     "City": "Seattle",
     "Name": "Interbay",
     "RegionID": "250939",
-    "NumCrimes": 21,
-    "CrimeOverArea": 0.4623841242627084,
+    "NumCrimes": 25,
+    "CrimeOverArea": 0.5504572907889386,
     "zhvi": -1
    },
    "geometry": {
@@ -11521,8 +11521,8 @@
     "City": "Seattle",
     "Name": "Laurelhurst",
     "RegionID": "251100",
-    "NumCrimes": 13,
-    "CrimeOverArea": 0.45107732390303334,
+    "NumCrimes": 9,
+    "CrimeOverArea": 0.3122843011636385,
     "zhvi": 1435800
    },
    "geometry": {
@@ -12629,8 +12629,8 @@
     "City": "Seattle",
     "Name": "Ravenna",
     "RegionID": "251709",
-    "NumCrimes": 41,
-    "CrimeOverArea": 1.0022585428709272,
+    "NumCrimes": 45,
+    "CrimeOverArea": 1.1000398641266274,
     "zhvi": 803900
    },
    "geometry": {
@@ -13133,8 +13133,8 @@
     "City": "Seattle",
     "Name": "Whittier Heights",
     "RegionID": "252336",
-    "NumCrimes": 16,
-    "CrimeOverArea": 1.0241112912742807,
+    "NumCrimes": 7,
+    "CrimeOverArea": 0.44804868993249775,
     "zhvi": 751400
    },
    "geometry": {
@@ -13181,8 +13181,8 @@
     "City": "Seattle",
     "Name": "Atlantic",
     "RegionID": "271804",
-    "NumCrimes": 19,
-    "CrimeOverArea": 2.9523434373264035,
+    "NumCrimes": 28,
+    "CrimeOverArea": 4.3508219076389105,
     "zhvi": -1
    },
    "geometry": {
@@ -13321,8 +13321,8 @@
     "City": "Seattle",
     "Name": "Cedar Park",
     "RegionID": "271831",
-    "NumCrimes": 45,
-    "CrimeOverArea": 1.8056620882308674,
+    "NumCrimes": 37,
+    "CrimeOverArea": 1.484655494767602,
     "zhvi": 609600
    },
    "geometry": {
@@ -14137,8 +14137,8 @@
     "City": "Seattle",
     "Name": "East Queen Anne",
     "RegionID": "271856",
-    "NumCrimes": 43,
-    "CrimeOverArea": 2.296745922845142,
+    "NumCrimes": 33,
+    "CrimeOverArea": 1.762618964043946,
     "zhvi": 870700
    },
    "geometry": {
@@ -14325,8 +14325,8 @@
     "City": "Seattle",
     "Name": "Lower Queen Anne",
     "RegionID": "271906",
-    "NumCrimes": 19,
-    "CrimeOverArea": 2.4401600480563013,
+    "NumCrimes": 20,
+    "CrimeOverArea": 2.568589524269791,
     "zhvi": 611300
    },
    "geometry": {
@@ -14501,8 +14501,8 @@
     "City": "Seattle",
     "Name": "Matthews Beach",
     "RegionID": "271913",
-    "NumCrimes": 14,
-    "CrimeOverArea": 0.37494354875940955,
+    "NumCrimes": 11,
+    "CrimeOverArea": 0.2945985025966789,
     "zhvi": 772700
    },
    "geometry": {
@@ -15393,8 +15393,8 @@
     "City": "Seattle",
     "Name": "Meadowbrook",
     "RegionID": "271915",
-    "NumCrimes": 18,
-    "CrimeOverArea": 0.9422251029860338,
+    "NumCrimes": 19,
+    "CrimeOverArea": 0.9945709420408134,
     "zhvi": 659300
    },
    "geometry": {
@@ -15541,8 +15541,8 @@
     "City": "Seattle",
     "Name": "Pioneer Square",
     "RegionID": "271963",
-    "NumCrimes": 65,
-    "CrimeOverArea": 10.83776307237128,
+    "NumCrimes": 95,
+    "CrimeOverArea": 15.83980756731187,
     "zhvi": -1
    },
    "geometry": {
@@ -15661,8 +15661,8 @@
     "City": "Seattle",
     "Name": "Magnolia",
     "RegionID": "271990",
-    "NumCrimes": 33,
-    "CrimeOverArea": 0.2625615745282471,
+    "NumCrimes": 44,
+    "CrimeOverArea": 0.3500820993709961,
     "zhvi": 875000
    },
    "geometry": {
@@ -16981,8 +16981,8 @@
     "City": "Seattle",
     "Name": "Westlake",
     "RegionID": "272022",
-    "NumCrimes": 31,
-    "CrimeOverArea": 2.7172706548771837,
+    "NumCrimes": 22,
+    "CrimeOverArea": 1.9283856260418721,
     "zhvi": 583400
    },
    "geometry": {
@@ -17305,8 +17305,8 @@
     "City": "Seattle",
     "Name": "Pinehurst",
     "RegionID": "343993",
-    "NumCrimes": 38,
-    "CrimeOverArea": 1.427744938662827,
+    "NumCrimes": 43,
+    "CrimeOverArea": 1.6156061148026726,
     "zhvi": 530800
    },
    "geometry": {
@@ -17509,8 +17509,8 @@
     "City": "Seattle",
     "Name": "Denny Triangle",
     "RegionID": "343995",
-    "NumCrimes": 91,
-    "CrimeOverArea": 14.175571997994629,
+    "NumCrimes": 84,
+    "CrimeOverArea": 13.085143382764272,
     "zhvi": 598000
    },
    "geometry": {
@@ -17573,8 +17573,8 @@
     "City": "Seattle",
     "Name": "Roosevelt",
     "RegionID": "344002",
-    "NumCrimes": 21,
-    "CrimeOverArea": 1.4974418845269715,
+    "NumCrimes": 31,
+    "CrimeOverArea": 2.210509448587434,
     "zhvi": 764900
    },
    "geometry": {
@@ -17841,8 +17841,8 @@
     "City": "Seattle",
     "Name": "Hawthorne Hills",
     "RegionID": "344004",
-    "NumCrimes": 4,
-    "CrimeOverArea": 0.4883761044783599,
+    "NumCrimes": 2,
+    "CrimeOverArea": 0.24418805223917994,
     "zhvi": 1075800
    },
    "geometry": {
@@ -18049,8 +18049,8 @@
     "City": "Seattle",
     "Name": "Denny - Blaine",
     "RegionID": "344011",
-    "NumCrimes": 2,
-    "CrimeOverArea": 0.30251414666477844,
+    "NumCrimes": 5,
+    "CrimeOverArea": 0.7562853666619461,
     "zhvi": -1
    },
    "geometry": {
@@ -19281,8 +19281,8 @@
     "City": "Seattle",
     "Name": "Waterfront",
     "RegionID": "344018",
-    "NumCrimes": 22,
-    "CrimeOverArea": 1.7286212619049828,
+    "NumCrimes": 32,
+    "CrimeOverArea": 2.5143581991345205,
     "zhvi": -1
    },
    "geometry": {
@@ -20489,8 +20489,8 @@
     "City": "Seattle",
     "Name": "Junction",
     "RegionID": "344020",
-    "NumCrimes": 35,
-    "CrimeOverArea": 1.5671465264477527,
+    "NumCrimes": 38,
+    "CrimeOverArea": 1.7014733715718457,
     "zhvi": 661100
    },
    "geometry": {
@@ -20765,8 +20765,8 @@
     "City": "Seattle",
     "Name": "Rainier View",
     "RegionID": "344027",
-    "NumCrimes": 11,
-    "CrimeOverArea": 0.6104928339258923,
+    "NumCrimes": 13,
+    "CrimeOverArea": 0.7214915310033273,
     "zhvi": 371200
    },
    "geometry": {
@@ -21085,8 +21085,8 @@
     "City": "Seattle",
     "Name": "Highland Park",
     "RegionID": "344029",
-    "NumCrimes": 41,
-    "CrimeOverArea": 0.8782210504390828,
+    "NumCrimes": 26,
+    "CrimeOverArea": 0.5569206661321013,
     "zhvi": 420800
    },
    "geometry": {
@@ -21489,8 +21489,8 @@
     "City": "Seattle",
     "Name": "Dunlap",
     "RegionID": "250478",
-    "NumCrimes": 63,
-    "CrimeOverArea": 2.675309374864252,
+    "NumCrimes": 58,
+    "CrimeOverArea": 2.4629832340020097,
     "zhvi": 402400
    },
    "geometry": {
@@ -22941,8 +22941,8 @@
     "City": "Seattle",
     "Name": "Lakewood",
     "RegionID": "251076",
-    "NumCrimes": 18,
-    "CrimeOverArea": 1.005790911381071,
+    "NumCrimes": 15,
+    "CrimeOverArea": 0.8381590928175593,
     "zhvi": 698800
    },
    "geometry": {
@@ -24353,8 +24353,8 @@
     "City": "Seattle",
     "Name": "Wallingford",
     "RegionID": "252248",
-    "NumCrimes": 64,
-    "CrimeOverArea": 1.2926599355143338,
+    "NumCrimes": 70,
+    "CrimeOverArea": 1.4138468044688026,
     "zhvi": 820700
    },
    "geometry": {
@@ -25061,8 +25061,8 @@
     "City": "Seattle",
     "Name": "Yesler Terrace",
     "RegionID": "252396",
-    "NumCrimes": 16,
-    "CrimeOverArea": 5.344495371478859,
+    "NumCrimes": 11,
+    "CrimeOverArea": 3.6743405678917154,
     "zhvi": -1
    },
    "geometry": {
@@ -25141,8 +25141,8 @@
     "City": "Seattle",
     "Name": "Broadview",
     "RegionID": "271819",
-    "NumCrimes": 33,
-    "CrimeOverArea": 0.5704681811402741,
+    "NumCrimes": 32,
+    "CrimeOverArea": 0.5531812665602658,
     "zhvi": 718500
    },
    "geometry": {
@@ -25665,8 +25665,8 @@
     "City": "Seattle",
     "Name": "First Hill",
     "RegionID": "271869",
-    "NumCrimes": 192,
-    "CrimeOverArea": 14.48672815609776,
+    "NumCrimes": 169,
+    "CrimeOverArea": 12.751338845731883,
     "zhvi": 424100
    },
    "geometry": {
@@ -25773,8 +25773,8 @@
     "City": "Seattle",
     "Name": "Harbor Island",
     "RegionID": "271886",
-    "NumCrimes": 3,
-    "CrimeOverArea": 0.11226445979287963,
+    "NumCrimes": 1,
+    "CrimeOverArea": 0.03742148659762654,
     "zhvi": -1
    },
    "geometry": {
@@ -26813,8 +26813,8 @@
     "City": "Seattle",
     "Name": "Leschi",
     "RegionID": "271901",
-    "NumCrimes": 19,
-    "CrimeOverArea": 0.8396997730512121,
+    "NumCrimes": 31,
+    "CrimeOverArea": 1.3700364718203988,
     "zhvi": 862000
    },
    "geometry": {
@@ -27453,8 +27453,8 @@
     "City": "Seattle",
     "Name": "South Lake Union",
     "RegionID": "271987",
-    "NumCrimes": 92,
-    "CrimeOverArea": 4.07379129620711,
+    "NumCrimes": 100,
+    "CrimeOverArea": 4.428034017616424,
     "zhvi": -1
    },
    "geometry": {
@@ -28081,8 +28081,8 @@
     "City": "Seattle",
     "Name": "University District",
     "RegionID": "272001",
-    "NumCrimes": 183,
-    "CrimeOverArea": 3.0564155976196883,
+    "NumCrimes": 187,
+    "CrimeOverArea": 3.123222495928315,
     "zhvi": 748300
    },
    "geometry": {
@@ -28937,8 +28937,8 @@
     "City": "Seattle",
     "Name": "West Queen Anne",
     "RegionID": "272018",
-    "NumCrimes": 33,
-    "CrimeOverArea": 1.6231995036002647,
+    "NumCrimes": 35,
+    "CrimeOverArea": 1.7215752310911898,
     "zhvi": 900600
    },
    "geometry": {
@@ -31161,8 +31161,8 @@
     "City": "Seattle",
     "Name": "Northgate",
     "RegionID": "343998",
-    "NumCrimes": 56,
-    "CrimeOverArea": 4.758953340883775,
+    "NumCrimes": 43,
+    "CrimeOverArea": 3.6541963153214705,
     "zhvi": 373200
    },
    "geometry": {
@@ -31261,8 +31261,8 @@
     "City": "Seattle",
     "Name": "North College Park",
     "RegionID": "343999",
-    "NumCrimes": 61,
-    "CrimeOverArea": 2.5106276131814247,
+    "NumCrimes": 52,
+    "CrimeOverArea": 2.1402071456628535,
     "zhvi": 580200
    },
    "geometry": {
@@ -31429,8 +31429,8 @@
     "City": "Seattle",
     "Name": "Maple Leaf",
     "RegionID": "344000",
-    "NumCrimes": 37,
-    "CrimeOverArea": 0.8687340805707755,
+    "NumCrimes": 29,
+    "CrimeOverArea": 0.6808996847716889,
     "zhvi": 683200
    },
    "geometry": {
@@ -31705,8 +31705,8 @@
     "City": "Seattle",
     "Name": "Wedgwood",
     "RegionID": "344001",
-    "NumCrimes": 13,
-    "CrimeOverArea": 0.37800359757701085,
+    "NumCrimes": 24,
+    "CrimeOverArea": 0.6978527955267892,
     "zhvi": 758900
    },
    "geometry": {
@@ -32005,8 +32005,8 @@
     "City": "Seattle",
     "Name": "Garfield",
     "RegionID": "344014",
-    "NumCrimes": 25,
-    "CrimeOverArea": 3.587187953471494,
+    "NumCrimes": 29,
+    "CrimeOverArea": 4.161138026026933,
     "zhvi": 745900
    },
    "geometry": {
@@ -32121,8 +32121,8 @@
     "City": "Seattle",
     "Name": "Judkins Park",
     "RegionID": "344015",
-    "NumCrimes": 48,
-    "CrimeOverArea": 4.776497560870158,
+    "NumCrimes": 40,
+    "CrimeOverArea": 3.980414634058465,
     "zhvi": 581700
    },
    "geometry": {
@@ -32265,8 +32265,8 @@
     "City": "Seattle",
     "Name": "Jackson Place",
     "RegionID": "344016",
-    "NumCrimes": 14,
-    "CrimeOverArea": 3.6135908806574712,
+    "NumCrimes": 7,
+    "CrimeOverArea": 1.8067954403287356,
     "zhvi": 546800
    },
    "geometry": {
@@ -32325,8 +32325,8 @@
     "City": "Seattle",
     "Name": "Little Saigon",
     "RegionID": "344017",
-    "NumCrimes": 39,
-    "CrimeOverArea": 6.996316842035168,
+    "NumCrimes": 44,
+    "CrimeOverArea": 7.893280539731984,
     "zhvi": -1
    },
    "geometry": {
@@ -32537,8 +32537,8 @@
     "City": "Seattle",
     "Name": "South Delridge",
     "RegionID": "344031",
-    "NumCrimes": 40,
-    "CrimeOverArea": 2.0117913804055347,
+    "NumCrimes": 42,
+    "CrimeOverArea": 2.1123809494258117,
     "zhvi": 400400
    },
    "geometry": {
@@ -32781,8 +32781,8 @@
     "City": "Seattle",
     "Name": "North Delridge",
     "RegionID": "344032",
-    "NumCrimes": 18,
-    "CrimeOverArea": 0.5330288399685489,
+    "NumCrimes": 23,
+    "CrimeOverArea": 0.6810924066264791,
     "zhvi": 489200
    },
    "geometry": {
@@ -33021,8 +33021,8 @@
     "City": "Seattle",
     "Name": "Seaview",
     "RegionID": "56654",
-    "NumCrimes": 9,
-    "CrimeOverArea": 0.3919367517205562,
+    "NumCrimes": 14,
+    "CrimeOverArea": 0.6096793915653097,
     "zhvi": 704400
    },
    "geometry": {
@@ -34049,8 +34049,8 @@
     "City": "Seattle",
     "Name": "Ballard",
     "RegionID": "250017",
-    "NumCrimes": 93,
-    "CrimeOverArea": 3.4242562128739316,
+    "NumCrimes": 94,
+    "CrimeOverArea": 3.4610761721521457,
     "zhvi": 608100
    },
    "geometry": {
@@ -34557,8 +34557,8 @@
     "City": "Seattle",
     "Name": "Beacon Hill",
     "RegionID": "250050",
-    "NumCrimes": 59,
-    "CrimeOverArea": 0.9809551776972583,
+    "NumCrimes": 58,
+    "CrimeOverArea": 0.964328818753237,
     "zhvi": 535400
    },
    "geometry": {
@@ -34929,8 +34929,8 @@
     "City": "Seattle",
     "Name": "Broadmoor",
     "RegionID": "250149",
-    "NumCrimes": 3,
-    "CrimeOverArea": 0.14656347318305327,
+    "NumCrimes": 2,
+    "CrimeOverArea": 0.09770898212203552,
     "zhvi": -1
    },
    "geometry": {
@@ -35981,8 +35981,8 @@
     "City": "Seattle",
     "Name": "Crown Hill",
     "RegionID": "250383",
-    "NumCrimes": 17,
-    "CrimeOverArea": 1.4411088155992315,
+    "NumCrimes": 18,
+    "CrimeOverArea": 1.5258799223991864,
     "zhvi": 626700
    },
    "geometry": {
@@ -36021,8 +36021,8 @@
     "City": "Seattle",
     "Name": "Haller Lake",
     "RegionID": "250801",
-    "NumCrimes": 103,
-    "CrimeOverArea": 1.955463616517367,
+    "NumCrimes": 88,
+    "CrimeOverArea": 1.6706873616847409,
     "zhvi": 523300
    },
    "geometry": {
@@ -36381,8 +36381,8 @@
     "City": "Seattle",
     "Name": "Loyal Heights",
     "RegionID": "251170",
-    "NumCrimes": 18,
-    "CrimeOverArea": 0.7591569830839373,
+    "NumCrimes": 25,
+    "CrimeOverArea": 1.0543846987276908,
     "zhvi": 754000
    },
    "geometry": {
@@ -36425,8 +36425,8 @@
     "City": "Seattle",
     "Name": "Madison Park",
     "RegionID": "251186",
-    "NumCrimes": 17,
-    "CrimeOverArea": 0.7621840322208437,
+    "NumCrimes": 19,
+    "CrimeOverArea": 0.8518527418938843,
     "zhvi": 1278700
    },
    "geometry": {
@@ -37753,8 +37753,8 @@
     "City": "Seattle",
     "Name": "Madrona",
     "RegionID": "251187",
-    "NumCrimes": 24,
-    "CrimeOverArea": 1.6681714557094227,
+    "NumCrimes": 21,
+    "CrimeOverArea": 1.4596500237457448,
     "zhvi": 946800
    },
    "geometry": {
@@ -38233,8 +38233,8 @@
     "City": "Seattle",
     "Name": "Rainier Beach",
     "RegionID": "251704",
-    "NumCrimes": 42,
-    "CrimeOverArea": 1.0082538788287811,
+    "NumCrimes": 39,
+    "CrimeOverArea": 0.9362357446267254,
     "zhvi": 458100
    },
    "geometry": {
@@ -39465,8 +39465,8 @@
     "City": "Seattle",
     "Name": "South Park",
     "RegionID": "251971",
-    "NumCrimes": 28,
-    "CrimeOverArea": 0.8993229194791602,
+    "NumCrimes": 31,
+    "CrimeOverArea": 0.9956789465662131,
     "zhvi": 375100
    },
    "geometry": {
@@ -39917,8 +39917,8 @@
     "City": "Seattle",
     "Name": "Sunset Hill",
     "RegionID": "252056",
-    "NumCrimes": 23,
-    "CrimeOverArea": 0.8225764186385233,
+    "NumCrimes": 14,
+    "CrimeOverArea": 0.5006986896060577,
     "zhvi": 818000
    },
    "geometry": {
@@ -40697,8 +40697,8 @@
     "City": "Seattle",
     "Name": "Belltown",
     "RegionID": "271808",
-    "NumCrimes": 185,
-    "CrimeOverArea": 20.87046437079875,
+    "NumCrimes": 165,
+    "CrimeOverArea": 18.61419795233402,
     "zhvi": 509100
    },
    "geometry": {
@@ -40805,8 +40805,8 @@
     "City": "Seattle",
     "Name": "Industrial District",
     "RegionID": "271892",
-    "NumCrimes": 157,
-    "CrimeOverArea": 1.1920129580029346,
+    "NumCrimes": 170,
+    "CrimeOverArea": 1.2907146679012667,
     "zhvi": -1
    },
    "geometry": {
@@ -43965,8 +43965,8 @@
     "City": "Seattle",
     "Name": "International District",
     "RegionID": "271893",
-    "NumCrimes": 92,
-    "CrimeOverArea": 13.33363655417611,
+    "NumCrimes": 103,
+    "CrimeOverArea": 14.927875707392818,
     "zhvi": -1
    },
    "geometry": {
@@ -44113,8 +44113,8 @@
     "City": "Seattle",
     "Name": "North Queen Anne",
     "RegionID": "271942",
-    "NumCrimes": 30,
-    "CrimeOverArea": 0.8528650290369951,
+    "NumCrimes": 36,
+    "CrimeOverArea": 1.023438034844394,
     "zhvi": 877200
    },
    "geometry": {
@@ -44549,8 +44549,8 @@
     "City": "Seattle",
     "Name": "Phinney Ridge",
     "RegionID": "271961",
-    "NumCrimes": 37,
-    "CrimeOverArea": 1.4133063790682725,
+    "NumCrimes": 38,
+    "CrimeOverArea": 1.4515038487728205,
     "zhvi": 802500
    },
    "geometry": {
@@ -44869,8 +44869,8 @@
     "City": "Seattle",
     "Name": "Sand Point",
     "RegionID": "271975",
-    "NumCrimes": 2,
-    "CrimeOverArea": 0.07928157518556969,
+    "NumCrimes": 4,
+    "CrimeOverArea": 0.15856315037113938,
     "zhvi": -1
    },
    "geometry": {
@@ -45837,8 +45837,8 @@
     "City": "Seattle",
     "Name": "Seward Park",
     "RegionID": "271977",
-    "NumCrimes": 20,
-    "CrimeOverArea": 0.5814024327181507,
+    "NumCrimes": 11,
+    "CrimeOverArea": 0.3197713379949829,
     "zhvi": 809100
    },
    "geometry": {
@@ -47877,8 +47877,8 @@
     "City": "Seattle",
     "Name": "Windermere",
     "RegionID": "272026",
-    "NumCrimes": 3,
-    "CrimeOverArea": 0.19638491022846885,
+    "NumCrimes": 4,
+    "CrimeOverArea": 0.2618465469712918,
     "zhvi": 1352000
    },
    "geometry": {
@@ -48589,8 +48589,8 @@
     "City": "Seattle",
     "Name": "Blue Ridge",
     "RegionID": "344006",
-    "NumCrimes": 3,
-    "CrimeOverArea": 0.1596624448931272,
+    "NumCrimes": 4,
+    "CrimeOverArea": 0.21288325985750292,
     "zhvi": 789000
    },
    "geometry": {
@@ -48829,8 +48829,8 @@
     "City": "Seattle",
     "Name": "High Point",
     "RegionID": "344033",
-    "NumCrimes": 30,
-    "CrimeOverArea": 1.162317976075781,
+    "NumCrimes": 39,
+    "CrimeOverArea": 1.511013368898515,
     "zhvi": 495000
    },
    "geometry": {
@@ -48997,8 +48997,8 @@
     "City": "Seattle",
     "Name": "Riverview",
     "RegionID": "344034",
-    "NumCrimes": 18,
-    "CrimeOverArea": 0.5109107584743847,
+    "NumCrimes": 22,
+    "CrimeOverArea": 0.6244464825798035,
     "zhvi": 490000
    },
    "geometry": {
@@ -49381,8 +49381,8 @@
     "City": "Seattle",
     "Name": "Woodland",
     "RegionID": "344007",
-    "NumCrimes": 4,
-    "CrimeOverArea": 0.40123330524323364,
+    "NumCrimes": 7,
+    "CrimeOverArea": 0.7021582841756588,
     "zhvi": -1
    },
    "geometry": {
@@ -49637,8 +49637,8 @@
     "City": "Seattle",
     "Name": "West Woodland",
     "RegionID": "344008",
-    "NumCrimes": 63,
-    "CrimeOverArea": 2.4603910137834126,
+    "NumCrimes": 43,
+    "CrimeOverArea": 1.6793145014712183,
     "zhvi": 716400
    },
    "geometry": {
@@ -49945,8 +49945,8 @@
     "City": "Seattle",
     "Name": "North Beach",
     "RegionID": "344009",
-    "NumCrimes": 6,
-    "CrimeOverArea": 0.3174684887208593,
+    "NumCrimes": 2,
+    "CrimeOverArea": 0.10582282957361977,
     "zhvi": 842700
    },
    "geometry": {
@@ -50377,8 +50377,8 @@
     "City": "Seattle",
     "Name": "Gatewood",
     "RegionID": "344022",
-    "NumCrimes": 31,
-    "CrimeOverArea": 1.1580994247640608,
+    "NumCrimes": 20,
+    "CrimeOverArea": 0.74716091920262,
     "zhvi": 644500
    },
    "geometry": {
@@ -50793,8 +50793,8 @@
     "City": "Seattle",
     "Name": "Fauntleroy",
     "RegionID": "344023",
-    "NumCrimes": 17,
-    "CrimeOverArea": 0.43614262732475273,
+    "NumCrimes": 25,
+    "CrimeOverArea": 0.641386216654048,
     "zhvi": 766700
    },
    "geometry": {
@@ -51821,8 +51821,8 @@
     "City": "Seattle",
     "Name": "Arbor Heights",
     "RegionID": "344024",
-    "NumCrimes": 11,
-    "CrimeOverArea": 0.31679848936736893,
+    "NumCrimes": 9,
+    "CrimeOverArea": 0.2591987640278473,
     "zhvi": 546100
    },
    "geometry": {
@@ -52365,8 +52365,8 @@
     "City": "Seattle",
     "Name": "Hillman City",
     "RegionID": "344025",
-    "NumCrimes": 20,
-    "CrimeOverArea": 1.7909771251222089,
+    "NumCrimes": 25,
+    "CrimeOverArea": 2.238721406402761,
     "zhvi": 495900
    },
    "geometry": {
@@ -52437,8 +52437,8 @@
     "City": "Seattle",
     "Name": "Genesee",
     "RegionID": "344026",
-    "NumCrimes": 22,
-    "CrimeOverArea": 1.3537855214703025,
+    "NumCrimes": 28,
+    "CrimeOverArea": 1.722999754598567,
     "zhvi": 696900
    },
    "geometry": {

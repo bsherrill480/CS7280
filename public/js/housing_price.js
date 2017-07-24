@@ -70,7 +70,7 @@
 
         // Draw effects
         addDescription(d.properties);
-        console.log('id:', d.properties['RegionID']);
+        // console.log('id:', d.properties['RegionID']);
 //		textArt(nameFn(d));
     }
 

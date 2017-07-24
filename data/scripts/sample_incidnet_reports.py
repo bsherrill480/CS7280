@@ -4,6 +4,7 @@ import random
 
 NUM_LINES = 5000
 OUTPUT_FILE = './short_incident.csv'
+CRIME_KEY = 'Event Clearance Group'
 
 if __name__ == '__main__':
     script_dir = os.path.dirname(__file__)
@@ -16,7 +17,10 @@ if __name__ == '__main__':
         headers = csv_data[0]
         data = csv_data[1:]
         random.shuffle(data)
-        shortened_csv = [headers] + data[0:NUM_LINES]
+        crime_key_index = headers.index(CRIME_KEY)
+        shortened_data = data[0:NUM_LINES]
+        shortened_data = [l for l in shortened_data if l[crime_key_index]]
+        shortened_csv = [headers] + shortened_data
 
     with open(OUTPUT_FILE, 'w+') as output_file:
         writer = csv.writer(output_file)
