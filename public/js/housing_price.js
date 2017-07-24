@@ -18,8 +18,6 @@
     var path = d3.geo.path()
             .projection(projection);
 
-    var centered;
-
     // var dummyText = g.append('text')
     //     .classed('dummy-text', true)
     //     .attr('x', 10)
@@ -54,7 +52,7 @@
         if (!zhvi) {
             console.log('bad zhvi', zhvi)
         } else if (zhvi === -1) {
-            return '#000000';
+            return 'white';
         }
         return color(zhvi);
     }
@@ -72,13 +70,20 @@
 
         // Draw effects
         addDescription(d.properties);
+        console.log('id:', d.properties['RegionID']);
 //		textArt(nameFn(d));
     }
 
     function mouseout(d){
         // Reset province color
         mapLayer.selectAll('path')
-            .style('fill', function(d){return centered && d===centered ? '#D5708B' : fillFn(d);});
+            .style('fill', function(d){
+                return fillFn(d);
+            })
+            .attr('class', function (d) {
+                return 'region-'  + d.properties['RegionID']
+            });
+
 
         // Remove effect text
         effectLayer.selectAll('text').transition()

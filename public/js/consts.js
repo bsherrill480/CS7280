@@ -7,7 +7,9 @@
 
 	var consts = window.consts = {};
 	consts.width = 700;
-	consts.height = 700;
+	consts.height = 775;
+
+	consts.HIDE_REGIONS = [];
 
 	consts.CRIME_TYPE_GROUPED = [
 		{
@@ -71,7 +73,7 @@
     consts.projection = d3.geo.mercator()
         .scale(100000)
         // Center the Map in Seattle
-        .center([-122.3, 47.64])
+        .center([-122.32, 47.605])
         .translate([consts.width / 2, consts.height / 2]);
         
 })();

@@ -10,7 +10,6 @@
 	var hmap = window.hmap;
 	var consts = window.consts;
 
-	var centered;
 	var width = consts.width;
 	var height = consts.height;
 
@@ -32,13 +31,19 @@
 	p911.init(g);
 	hmap.init(g);
 
+
+	// Neighborhoods
+	// d3.json("Zillow_Zhvi_Neighborhoods_WA_Geo.json", function(error, mapData) {
+	// 	hmap.renderMap(mapData);
+	// });
+	
+	d3.json("Zillow_Zhvi_Neighborhoods_WA_Geo.json", function(error, mapData) {
+		hmap.renderMap(mapData);
+	});
+
 	d3.csv('short_incident.csv', function (error, data) {
 		p911.renderFilterPoliceDotsUI();
 		p911.renderPoliceDots(data);
-	});
-
-	d3.json("Zillow_Zhvi_Neighborhoods_WA_Geo.json", function(error, mapData) {
-		hmap.renderMap(mapData);
 	});
 
 })();
