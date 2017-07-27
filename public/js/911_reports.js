@@ -125,6 +125,7 @@
 							el.style.display = 'none';
 						}
 					}
+					crimeHousingScatter.drawScatter();
 
 				});
 				crimeGroupTypesContainer.appendChild(crimeTypeContainer);
