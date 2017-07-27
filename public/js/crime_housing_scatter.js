@@ -10,7 +10,11 @@
     var housingData;
     
     function init(data) {
-       housingData = data; 
+       housingData = data.features.map(function (i) {
+           return i.properties;
+       }).filter(function (i) {
+           return i.zhvi != -1;
+       });
     }
 
     function drawScatter() {
@@ -35,13 +39,15 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var data = create_data(1000);
+        var filteredHousingData = getData(housingData);
+        var data = prep_data(filteredHousingData);
 
         data.forEach(function(d) {
             d.x = +d.x;
             d.y = +d.y;
             d.yhat = +d.yhat;
         });
+        console.log('scatterData', data);
 
         var line = d3.svg.line()
             .x(function(d) {
@@ -98,24 +104,32 @@
             .attr("d", line);
 
 
+        function getData(housingData) {
+            return window.sharedData.calculateCurrentShowCrimesAll(housingData);
+        }
 
-        function create_data(nsamples) {
+        function prep_data(rawData) {
             var x = [];
             var y = [];
-            var n = nsamples;
+            var d = [];
+            var n = rawData.length;
             var x_mean = 0;
             var y_mean = 0;
             var term1 = 0;
             var term2 = 0;
-            var noise_factor = 100;
-            var noise = 0;
+            var d_i;
             // create x and y values
             for (var i = 0; i < n; i++) {
-                noise = noise_factor * Math.random();
-                noise *= Math.round(Math.random()) == 1 ? 1 : -1;
-                y.push(i / 5 + noise);
-                x.push(i + 1);
-                x_mean += x[i]
+                // noise = noise_factor * Math.random();
+                // noise *= Math.round(Math.random()) == 1 ? 1 : -1;
+                d_i = rawData[i];
+                // y.push(i / 5 + noise);
+                // x.push(i + 1);
+                y.push(d_i['crimeOverArea']);
+                // y.push(d_i['shownCrimes']);
+                x.push(d_i['zhvi']);
+                d.push(d_i['d']);
+                x_mean += x[i];
                 y_mean += y[i]
             }
             // calculate mean x and y
@@ -136,7 +150,7 @@
             var b0 = y_mean - (b1 * x_mean);
             // perform regression
 
-            yhat = [];
+            var yhat = [];
             // fit line using coeffs
             for (i = 0; i < x.length; i++) {
                 yhat.push(b0 + (x[i] * b1));
@@ -147,7 +161,8 @@
                 data.push({
                     "yhat": yhat[i],
                     "y": y[i],
-                    "x": x[i]
+                    "x": x[i],
+                    "d": d[i],
                 })
             }
             return (data);

@@ -7,7 +7,9 @@
     var height = consts.height;
     var $infoName = $('#info-name');
     var $infoDesc = $('#info-desc');
-    var showCrimes = window.sharedData.crimeUI.showCrimes;
+    // var showCrimes = window.sharedData.crimeUI.showCrimes;
+    var calculateCurrentShowCrimes = window.sharedData.calculateCurrentShowCrimes;
+    var calculateCrimesByArea = window.sharedData.calculateCrimesByArea;
 
     // set on init;
     var bigText;
@@ -58,21 +60,6 @@
             return 'white';
         }
         return color(zhvi);
-    }
-
-    function calculateCurrentShowCrimes(d) {
-        var crimesShown = [];
-        d['Crimes'].forEach(function (crime) {
-            if (showCrimes[crime]) {
-                crimesShown.push(crime)
-            }
-        });
-        return crimesShown.length;
-    }
-
-    function calculateCrimesByArea(d) {
-        const SCALING_FACTOR = 1./100000;
-        return calculateCurrentShowCrimes(d) / d['Area'] * SCALING_FACTOR
     }
 
 
