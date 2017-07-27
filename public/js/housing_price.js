@@ -110,12 +110,12 @@
     
         var minScaleText = scaleLayer
             .append('text')
-            .attr('x', 0)
+            .attr('x', 30)
             .attr('y', height-30);
     
         var maxScaleText = scaleLayer
             .append('text')
-            .attr('x', 140)
+            .attr('x', 170)
             .attr('y', height-30);
         scaleLayerGradient
             .append('stop')
@@ -128,7 +128,7 @@
 
         scaleLayer
             .append('rect')
-            .attr('x', 10)
+            .attr('x', 40)
             .attr('y', height - 20)
             .attr('rx', 10)
             .attr('ry', 10)
