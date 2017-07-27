@@ -68,6 +68,9 @@
 			stroke: #293b47;
 			fill: orange;
 		}
+		.scatter-plot-area-container {
+			width: 605px;
+		}
 
 		/* ======= END SCATTER PLOT ======== */
 
@@ -80,9 +83,12 @@
 		}
 		.info-box {
 			padding: 1rem;
+			width: 300px;
 		}
 		.right-panel {
-			width: calc(100% - 710px);
+			width: calc(100% - 510px);
+			display: flex;
+			flex-wrap: wrap;
 		}
 		.map {
 		}
@@ -125,10 +131,14 @@
 	<svg class="map"></svg>
 	<div class="right-panel">
 		<div class="info-box">
-			<div id="info-name"></div>
-			<div id="info-desc"></div>
+			<div id="info-name">
+				Area details
+			</div>
+			<div id="info-desc">
+				Mouseover to see details about area.
+			</div>
 		</div>
-		<div>
+		<div class="scatter-plot-area-container">
 			<h5>Scatter Plot: </h5>
 			<div id="scatter-plot-area"></div>
 		</div>

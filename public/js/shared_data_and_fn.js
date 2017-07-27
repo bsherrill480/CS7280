@@ -43,13 +43,14 @@
         var zhvi = d.zhvi;
         var cost = zhvi !== -1 ? '$' + zhvi.toLocaleString() : 'Not available';
         var showCrimes = calculateCurrentShowCrimes(d);
+        var crimeOverArea = calculateCrimesByArea(d).toFixed(4);
         $infoName.text(d.Name);
 
         var htmlList = '<ul>';
         htmlList += '<li>' + 'Median Zhvi: ' + cost + '</li>';
         htmlList += '<li>' + 'Total Number of Crimes: ' + d.NumCrimes + '</li>';
         htmlList += '<li>' + 'Number of Crimes: ' + showCrimes + '</li>';
-        htmlList += '<li>' + 'Relative Crime Over Area: ' + calculateCrimesByArea(d) + '</li>';
+        htmlList += '<li>' + 'Relative Crime Over Area: ' + crimeOverArea + '</li>';
         // htmlList += '<li>' + 'Relative Crime by Area: ' + d.CrimeOverArea + '</li>';
         htmlList += '</ul>';
         $infoDesc.html(htmlList);    
