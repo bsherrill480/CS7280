@@ -5,6 +5,7 @@ from shapely.geometry import shape, Point
 
 # neighborhood
 REGION_ID_KEY = 'RegionID'
+CRIME_KEY = 'Event Clearance Group'
 
 # zipcode
 # REGION_ID_KEY = 'RegionName'
@@ -28,18 +29,27 @@ def add_crime_to_json(geo_dict):
         data = csv_data[1:]
         lon_index = headers.index('Longitude')
         lat_index = headers.index('Latitude')
+        crime_key_index = headers.index(CRIME_KEY)
 
-        points = [Point(float(d[lon_index]), float(d[lat_index])) for d in data]
+        points = [
+            [
+                d[crime_key_index],
+                Point(float(d[lon_index]), float(d[lat_index]))
+            ] for d in data
+            ]
 
         for feature in geo_dict['features']:
             polygon = shape(feature['geometry'])
             properties = feature['properties']
             properties['NumCrimes'] = 0
-            for point in points:
+            properties['Area'] = polygon.area
+            properties['Crimes'] = []
+            for crime, point in points:
                 if polygon.contains(point):
                     properties['NumCrimes'] += 1
+                    properties['Crimes'].append(crime)
 
-            properties['CrimeOverArea'] = properties['NumCrimes'] / (polygon.area * 100000)
+            # properties['CrimeOverArea'] = properties['NumCrimes'] / (polygon.area * 100000)
 
 
 def add_zhvi_to_json(geo_dict):
