@@ -5,6 +5,8 @@
     var consts = window.consts;
     var projection = consts.projection;
     var height = consts.height;
+    var $infoName = $('#info-name');
+    var $infoDesc = $('#info-desc');
 
     // set on init;
     var bigText;
@@ -61,7 +63,15 @@
     function addDescription(d) {
         var zhvi = d.zhvi;
         var cost = zhvi !== -1 ? '$' + zhvi.toLocaleString() : 'Not available';
-        bigText.text(d.Name + ': ' + cost);
+        $infoName.text(d.Name);
+        console.log('d', d)
+        var htmlList = '<ul>';
+        htmlList += '<li>' + 'Median Zhvi: ' + cost + '</li>';
+        htmlList += '<li>' + 'Total Number of Crimes: ' + d.NumCrimes + '</li>';
+        htmlList += '<li>' + 'Relative Crime by Area: ' + d.CrimeOverArea + '</li>';
+        htmlList += '</ul>';
+        $infoDesc.html(htmlList);
+        // bigText.text(d.Name + ': ' + cost);
     }
 
     function mouseover(d){
@@ -89,16 +99,16 @@
         effectLayer.selectAll('text').transition()
             .style('opacity', 0)
             .remove();
-        bigText.text('')
+        // bigText.text('')
     }
     
     function init(g) {
         effectLayer = g.append('g')
             .classed('effect-layer', true);
-        bigText = g.append('text')
-            .classed('big-text', true)
-            .attr('x', 20)
-            .attr('y', 45);
+        // bigText = g.append('text')
+        //     .classed('big-text', true)
+        //     .attr('x', 20)
+        //     .attr('y', 45);
         mapLayer = g.append('g')
             .classed('map-layer', true);
         scaleLayer = g.append('g')

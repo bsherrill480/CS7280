@@ -4,6 +4,11 @@
 	<meta charset="utf-8">
 	<title>Point on a map D3</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
 
@@ -34,15 +39,22 @@
 			font-weight: 400;
 		}
 		.filter-box {
+			height: 50%;
+		}
+		.info-box {
+			padding: 1rem;
+		}
+		.right-panel {
+			width: calc(100% - 710px);
 		}
 		.map {
 		}
-		.container {
+		.main-container {
 			display: flex;
 			align-items: flex-start;
 			flex-wrap: wrap;
 		}
-		.crime-header {
+		.filter-header {
 			font-weight: bold;
 			font-size: 1.5rem;
 		}
@@ -55,6 +67,10 @@
 		}
 		.crime-dot {
 		}
+		.check-all-link {
+			padding-right: .5em;
+			padding-left: .5em;
+		}
 
 	</style>
 	<meta http-equiv="cache-control" content="max-age=0" />
@@ -64,14 +80,36 @@
 	<meta http-equiv="pragma" content="no-cache" />
 </head>
 <body>
-<div class="container">
+<div class="main-container">
 	<svg class="map"></svg>
-	<div class="filter-box">
-		<div class="crime-header">
-			Filter crime types:
+	<div class="right-panel">
+		<div class="info-box">
+			<div id="info-name"></div>
+			<div id="info-desc"></div>
 		</div>
-		<div class="crime-list">
-			<div id="crime-types-ui">
+		<div class="filter-box">
+			<div class="filter-header">
+				Display Options:
+			</div>
+			<div id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="card">
+					<div class="card-header" role="tab" id="headingOne">
+						<h5 class="mb-0">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Crime
+							</a>
+						</h5>
+					</div>
+
+					<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+						<div class="card-block">
+							<div class="crime-list">
+								<div id="crime-types-ui">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

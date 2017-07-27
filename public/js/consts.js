@@ -70,8 +70,16 @@
 		]},
 	];
 	
+	consts.ALL_CRIME_TYPES = [];
+	consts.CRIME_TYPE_GROUPED.forEach(function (group) {
+		var crimes = group.crime;
+		crimes.forEach(function (c) {
+			consts.ALL_CRIME_TYPES.push(c);
+		});
+	});
+	
     consts.projection = d3.geo.mercator()
-        .scale(100000)
+        .scale(115000)
         // Center the Map in Seattle
         .center([-122.32, 47.605])
         .translate([consts.width / 2, consts.height / 2]);

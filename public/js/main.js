@@ -43,7 +43,7 @@
 	});
 
 	d3.csv('short_incident.csv', function (error, data) {
-		p911.renderFilterPoliceDotsUI();
+		p911.renderFilterPoliceDotsUI(data);
 		p911.renderPoliceDots(data);
 	});
 

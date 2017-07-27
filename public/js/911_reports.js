@@ -26,12 +26,31 @@
 		})
 	}
 
+	function getGroupCrimeCount(crimeCounts, crimeTypes) {
+		var count = 0;
+		crimeTypes.forEach(function (crimeType) {
+			count += crimeCounts[crimeType];
+		});
+		return count;
+	}
+
 	var renderPoliceDots = null;
 	
 	// set on init
 	var dotLayer;
 
-	function renderFilterPoliceDotsUI() {
+	function renderFilterPoliceDotsUI(data) {
+		console.log('data', data);
+
+		var crimeCounts = {};
+		consts.ALL_CRIME_TYPES.forEach(function (crimeType) {
+			crimeCounts[crimeType] = 0;
+		});
+		data.forEach(function (d) {
+			var crime = d[CRIME_KEY];
+			crimeCounts[crime] += 1;
+		});
+
 		var rootEl = document.getElementById('crime-types-ui');
 
 		CRIME_TYPE_GROUPED.forEach(function (crimeCategory) {
@@ -39,7 +58,8 @@
 			var crimeTypes = crimeCategory.crime;
 			var crimeGroupContainer = document.createElement('div');
 			var crimeGroupLabel = document.createElement('label');
-			crimeGroupLabel.innerText = categoryName;
+			var groupCrimeCount =getGroupCrimeCount(crimeCounts, crimeTypes);
+			crimeGroupLabel.innerText = categoryName + ' (' + groupCrimeCount + ')';
 			crimeGroupLabel.className += ' crime-type-header';
 			crimeGroupContainer.appendChild(crimeGroupLabel);
 			var crimeGroupTypesContainer = document.createElement('div');
@@ -50,9 +70,12 @@
 
 			var checkAllLink = document.createElement('a');
 			checkAllLink.innerText = '(all)';
+			checkAllLink.setAttribute('href', '#');
+			checkAllLink.className += ' check-all-link';
 
 			var uncheckAllLink = document.createElement('a');
 			uncheckAllLink.innerText = '(none)';
+			uncheckAllLink.setAttribute('href', '#');
 
 			checkAllLink.addEventListener('click', function () {
 				options.forEach(function (option) {
@@ -84,7 +107,8 @@
 				var crimeTypeContainer = document.createElement('div');
 				crimeTypeContainer.appendChild(option);
 				crimeTypeContainer.appendChild(label);
-				label.innerText = crime_type;
+				var crimeCount = crimeCounts[crime_type];
+				label.innerText = crime_type + ' (' + crimeCount + ')';
 				option.setAttribute('type', 'checkbox');
 				option.checked = true;
 				option.addEventListener('click', function () {
