@@ -5,7 +5,7 @@
         bottom: 30,
         left: 40
     },
-        width = 400 - margin.left - margin.right,
+        width = 600 - margin.left - margin.right,
         height = 300 - margin.top - margin.bottom;
     var housingData;
     
@@ -73,7 +73,7 @@
             .attr("x", width)
             .attr("y", -6)
             .style("text-anchor", "end")
-            .text("X-Value");
+            .text("ZHVI");
 
         svg.append("g")
             .attr("class", "y axis")
@@ -84,25 +84,41 @@
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("Y-Value")
+            .text("Crime/Area")
 
         svg.selectAll(".scatter-dot")
             .data(data)
             .enter().append("circle")
-            .attr("class", "scatter-dot")
+            .attr("class", function (d) {
+                return "scatter-dot " + 'scatter-region-' + d['d']['RegionID']
+            })
             .attr("r", 3.5)
             .attr("cx", function(d) {
                 return x(d.x);
             })
             .attr("cy", function(d) {
                 return y(d.y);
-            });
+            })
+            .on('mouseover', mouseover)
+            .on('mouseout', mouseout);
 
         svg.append("path")
             .datum(data)
             .attr("class", "line")
             .attr("d", line);
 
+
+        function mouseover(d) {
+            var $el = $(this);
+            $el.addClass('active');
+            $('.map-region-' + d['d']['RegionID']).css('fill', 'orange');
+            window.sharedData.updateSelectedDescription(d['d']);
+        }
+        function mouseout(d) {
+            var $el = $(this);
+            $el.removeClass('active');
+            window.sharedData.resetMapColors();
+        }
 
         function getData(housingData) {
             return window.sharedData.calculateCurrentShowCrimesAll(housingData);

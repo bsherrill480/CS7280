@@ -5,8 +5,6 @@
     var consts = window.consts;
     var projection = consts.projection;
     var height = consts.height;
-    var $infoName = $('#info-name');
-    var $infoDesc = $('#info-desc');
     // var showCrimes = window.sharedData.crimeUI.showCrimes;
     var calculateCurrentShowCrimes = window.sharedData.calculateCurrentShowCrimes;
     var calculateCrimesByArea = window.sharedData.calculateCrimesByArea;
@@ -15,7 +13,6 @@
     var bigText;
     var mapLayer;
     var scaleLayer;
-    var effectLayer;
 
     var color = d3.scale.linear()
         .range(['#E0FFE6', '#006B2A']);
@@ -64,22 +61,7 @@
 
 
     function addDescription(d) {
-        calculateCurrentShowCrimes(d);
-        var zhvi = d.zhvi;
-        var cost = zhvi !== -1 ? '$' + zhvi.toLocaleString() : 'Not available';
-        var showCrimes = calculateCurrentShowCrimes(d);
-        console.log('d', d)
-        $infoName.text(d.Name);
-
-        var htmlList = '<ul>';
-        htmlList += '<li>' + 'Median Zhvi: ' + cost + '</li>';
-        htmlList += '<li>' + 'Total Number of Crimes: ' + d.NumCrimes + '</li>';
-        htmlList += '<li>' + 'Number of Crimes: ' + showCrimes + '</li>';
-        htmlList += '<li>' + 'Relative Crime Over Area: ' + calculateCrimesByArea(d) + '</li>';
-        // htmlList += '<li>' + 'Relative Crime by Area: ' + d.CrimeOverArea + '</li>';
-        htmlList += '</ul>';
-        $infoDesc.html(htmlList);
-        // bigText.text(d.Name + ': ' + cost);
+        window.sharedData.updateSelectedDescription(d);
     }
 
     function mouseover(d){
@@ -88,35 +70,28 @@
 
         // Draw effects
         addDescription(d.properties);
+        var $el = $('.scatter-region-' + d.properties['RegionID'])
+        $el.addClass('active');
         // console.log('id:', d.properties['RegionID']);
 //		textArt(nameFn(d));
     }
-
-    function mouseout(d){
+    
+    function resetMapColors() {
         // Reset province color
         mapLayer.selectAll('path')
             .style('fill', function(d){
                 return fillFn(d);
-            })
-            .attr('class', function (d) {
-                return 'region-'  + d.properties['RegionID']
             });
+    }
 
-
-        // Remove effect text
-        effectLayer.selectAll('text').transition()
-            .style('opacity', 0)
-            .remove();
-        // bigText.text('')
+    function mouseout(d){
+        // Reset province color
+        resetMapColors();
+        var $el = $('.scatter-region-' + d.properties['RegionID'])
+        $el.removeClass('active');
     }
     
     function init(g) {
-        effectLayer = g.append('g')
-            .classed('effect-layer', true);
-        // bigText = g.append('text')
-        //     .classed('big-text', true)
-        //     .attr('x', 20)
-        //     .attr('y', 45);
         mapLayer = g.append('g')
             .classed('map-layer', true);
         scaleLayer = g.append('g')
@@ -180,6 +155,9 @@
             .attr('d', path)
             .attr('vector-effect', 'non-scaling-stroke')
             .style('fill', fillFn)
+            .attr('class', function (d) {
+                return 'map-region-'  + d.properties['RegionID']
+            })
             .on('mouseover', mouseover)
             .on('mouseout', mouseout)
 //				.on('click', clicked);
@@ -192,5 +170,6 @@
     // hmap.height = height;
     hmap.init = init;
     hmap.renderMap = renderMap;
+    sharedData.resetMapColors = resetMapColors;
 
 })();

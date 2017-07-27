@@ -3,6 +3,8 @@
  */
 
 (function () {
+    var $infoName = $('#info-name');
+    var $infoDesc = $('#info-desc');
     var consts = window.consts;
     var CRIME_TYPES = consts.ALL_CRIME_TYPES;
 	var uiShowCrimes = {};
@@ -35,6 +37,23 @@
         const SCALING_FACTOR = 1./100000;
         return calculateCurrentShowCrimes(d) / d['Area'] * SCALING_FACTOR
     }
+    
+    function updateSelectedDescription(d) {
+        console.log('d', d);
+        var zhvi = d.zhvi;
+        var cost = zhvi !== -1 ? '$' + zhvi.toLocaleString() : 'Not available';
+        var showCrimes = calculateCurrentShowCrimes(d);
+        $infoName.text(d.Name);
+
+        var htmlList = '<ul>';
+        htmlList += '<li>' + 'Median Zhvi: ' + cost + '</li>';
+        htmlList += '<li>' + 'Total Number of Crimes: ' + d.NumCrimes + '</li>';
+        htmlList += '<li>' + 'Number of Crimes: ' + showCrimes + '</li>';
+        htmlList += '<li>' + 'Relative Crime Over Area: ' + calculateCrimesByArea(d) + '</li>';
+        // htmlList += '<li>' + 'Relative Crime by Area: ' + d.CrimeOverArea + '</li>';
+        htmlList += '</ul>';
+        $infoDesc.html(htmlList);    
+    }
 
 
     
@@ -45,6 +64,8 @@
     sharedData.calculateCurrentShowCrimes = calculateCurrentShowCrimes;
     sharedData.calculateCurrentShowCrimesAll = calculateCurrentShowCrimesAll;
     sharedData.calculateCrimesByArea = calculateCrimesByArea;
+    sharedData.updateSelectedDescription = updateSelectedDescription;
+    sharedData.resetMapColors = function () {}; // gets sets by housing_price.js
     
     
 
