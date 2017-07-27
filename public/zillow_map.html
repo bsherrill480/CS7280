@@ -34,6 +34,39 @@
 			font-weight: 300;
 		}
 
+
+		/* ======= START SCATTER PLOT ======== */
+
+		.line {
+			stroke: #E4002B;
+			fill: none;
+			stroke-width: 3;
+		}
+
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: black;
+			shape-rendering: crispEdges;
+		}
+
+		.axis text {
+			font-size: 10px;
+			font-family: sans-serif;
+		}
+
+		.text-label {
+			font-size: 10px;
+			font-family: sans-serif;
+		}
+
+		.scatter-dot {
+			stroke: #293b47;
+			fill: #7A99AC
+		}
+
+		/* ======= END SCATTER PLOT ======== */
+
 		text.big-text{
 			font-size: 20px;
 			font-weight: 400;
@@ -71,6 +104,10 @@
 			padding-right: .5em;
 			padding-left: .5em;
 		}
+		#info-name {
+			font-size: 1.25em;
+			font-weight: bold;
+		}
 
 	</style>
 	<meta http-equiv="cache-control" content="max-age=0" />
@@ -86,6 +123,10 @@
 		<div class="info-box">
 			<div id="info-name"></div>
 			<div id="info-desc"></div>
+		</div>
+		<div>
+			<h5>Scatter Plot: </h5>
+			<div id="scatter-plot-area"></div>
 		</div>
 		<div class="filter-box">
 			<div class="filter-header">
@@ -177,7 +218,9 @@
 </script>
 <!-- consts.js should be last file -->
 <script type="text/javascript" src="js/consts.js"></script>
+<script type="text/javascript" src="js/shared_data.js"></script>
 
+<script type="text/javascript" src="js/crime_housing_scatter.js"></script>
 <script type="text/javascript" src="js/911_reports.js"></script>
 <script type="text/javascript" src="js/housing_price.js"></script>
 <!-- main.js should be last file -->

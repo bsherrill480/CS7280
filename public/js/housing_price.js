@@ -7,6 +7,7 @@
     var height = consts.height;
     var $infoName = $('#info-name');
     var $infoDesc = $('#info-desc');
+    var showCrimes = window.sharedData.crimeUI.showCrimes;
 
     // set on init;
     var bigText;
@@ -59,16 +60,36 @@
         return color(zhvi);
     }
 
+    function calculateCurrentShowCrimes(d) {
+        var crimesShown = [];
+        d['Crimes'].forEach(function (crime) {
+            if (showCrimes[crime]) {
+                crimesShown.push(crime)
+            }
+        });
+        return crimesShown.length;
+    }
+
+    function calculateCrimesByArea(d) {
+        const SCALING_FACTOR = 1./100000;
+        return calculateCurrentShowCrimes(d) / d['Area'] * SCALING_FACTOR
+    }
+
 
     function addDescription(d) {
+        calculateCurrentShowCrimes(d);
         var zhvi = d.zhvi;
         var cost = zhvi !== -1 ? '$' + zhvi.toLocaleString() : 'Not available';
-        $infoName.text(d.Name);
+        var showCrimes = calculateCurrentShowCrimes(d);
         console.log('d', d)
+        $infoName.text(d.Name);
+
         var htmlList = '<ul>';
         htmlList += '<li>' + 'Median Zhvi: ' + cost + '</li>';
         htmlList += '<li>' + 'Total Number of Crimes: ' + d.NumCrimes + '</li>';
-        htmlList += '<li>' + 'Relative Crime by Area: ' + d.CrimeOverArea + '</li>';
+        htmlList += '<li>' + 'Number of Crimes: ' + showCrimes + '</li>';
+        htmlList += '<li>' + 'Relative Crime Over Area: ' + calculateCrimesByArea(d) + '</li>';
+        // htmlList += '<li>' + 'Relative Crime by Area: ' + d.CrimeOverArea + '</li>';
         htmlList += '</ul>';
         $infoDesc.html(htmlList);
         // bigText.text(d.Name + ': ' + cost);

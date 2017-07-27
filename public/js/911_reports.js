@@ -9,7 +9,7 @@
 	var consts = window.consts;
 	var CRIME_TYPE_GROUPED = consts.CRIME_TYPE_GROUPED;
 	var projection = consts.projection;
-
+	var crimeUI = window.sharedData.crimeUI;
 	
 	function crimeTypeToClass(crimeType) {
 		var r = crimeType.replace(/[^a-zA-Z]/g, '')
@@ -114,16 +114,16 @@
 				option.addEventListener('click', function () {
 					var className = crimeTypeToClass(crime_type);
 					var isChecked = option.checked;
+					crimeUI.showCrimes[crime_type] = isChecked;
 					var dotsToManipulate = document.getElementsByClassName(className);
 					var el;
 					for(var i = 0; i < dotsToManipulate.length; i++) {
 						el = dotsToManipulate[i];
-						if (isChecked) {
+						if (isChecked) { // then display them
 							el.style.display = 'block'
-						} else {
+						} else { // else don't
 							el.style.display = 'none';
 						}
-
 					}
 
 				});

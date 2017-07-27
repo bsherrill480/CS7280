@@ -8,6 +8,7 @@
 	// "Imports"
 	var p911 = window.p911;
 	var hmap = window.hmap;
+	var crimeHousingScatter = window.crimeHousingScatter;
 	var consts = window.consts;
 
 	var width = consts.width;
@@ -40,6 +41,8 @@
 	
 	d3.json("Zillow_Zhvi_Neighborhoods_WA_Geo.json", function(error, mapData) {
 		hmap.renderMap(mapData);
+		crimeHousingScatter.init(mapData);
+		crimeHousingScatter.drawScatter();
 	});
 
 	d3.csv('short_incident.csv', function (error, data) {

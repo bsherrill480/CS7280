@@ -6,7 +6,7 @@
 (function () {
 
 	var consts = window.consts = {};
-	consts.width = 700;
+	consts.width = 500;
 	consts.height = 775;
 
 	consts.HIDE_REGIONS = [];
